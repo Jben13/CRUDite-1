@@ -16,15 +16,44 @@ $('.store-button').on('click', function(event) {
     
 });
 
-$('.get-button').on('click', function(event) {
-	// localStorage.getItem('booya');
-	let titleValue = localStorage.getItem('titleValue');
-	let codeValue = localStorage.getItem('codeValue'); //booya is the property
-	$('.debug').html(`<p>${titleValue} ${codeValue}</p>`);
-});
+// $('.get-button').on('click', function(event) {
+// 	// localStorage.getItem('booya');
+// 	let titleValue = localStorage.getItem('titleValue');
+// 	let codeValue = localStorage.getItem('codeValue'); //booya is the property
+// 	$('.feed').html(`<p>${titleValue} ${codeValue}</p>`);
+// });
 
 $('.delete-button').on('click', function(event) {
 	console.log(localStorage.removeItem('booya')); //deletes given property
 });
+
+// var subject = $('.input-title-field').val();
+// var posInput = $('.pos-input').val();
+// var studyInput = $('.study-input').val();
+// var learnInput = $('.learn-input').val();
+// var recomInput = $('.recom-input').val();
+// var docInput = $('.doc-input').val();
+$(function() {
+	$('.submit-card').on ('click', function(e){
+		e.preventDefault();
+		localStorage.setItem("flag","set");
+		var data = $('#form-card').serializedArray();
+		  $.each(data, function(i, obj) {
+		  lovalStorage.setItem(obj.name, obj.value);
+		});
+	  });
+	  If (localStorage.getItem("flag")== "set"){
+		  $('.feed').before("<p>This form has saved data! </p>")
+		  var data = $('#form-card').serializedArray();
+		  $.each(data, function(i, obj) {
+			$("[name='" + obj.name + "']").val(localStorage.getItem(obj.name));
+		  
+		});
+	};
+});
+
+
+
+
 
 });

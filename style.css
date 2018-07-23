@@ -4,10 +4,17 @@
 	flex-flow: row-wrap;
 }
 
-.content-display {
-
+.main-container {
+border: 2px solid black;
+justify-content: center;
 }
-
+.page{
+  justify-content:center;
+  display: block;
+}
+body{
+justify-content: center;
+}
 
 button {
   border-radius: 3px;
@@ -39,7 +46,8 @@ button:hover {
  font-size: 16px;
 }
 
-form{
+.card-form{
+  border: 3px solid black;
   background: dodgerblue;
   padding: 40px;
   max-width: 600px;
@@ -47,3 +55,14 @@ form{
   border-radius: 4px;
   box-shadow: 0 4px 10px rgba(19, 35, 47, 0.3);
 }
+
+.form:hover {
+  
+}
+.tab-group{
+
+}
+
+.tab-group:after{
+}
+

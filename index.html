@@ -12,12 +12,26 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
-  <script src="app.js"></script>
+	<script src="app.js"></script>
+	<script src="moment.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 
 <body>
 	<div class="page">
 		<hi> 5 Minute Conptemplation</hi>
+		<br/>
+	  <button onclick="document.getElementById('card-form').style.display='block'" class="subject-submit">Start Card</button>
+	</div>
+
+	<div class="top-nav">
+		<a href="#home">Home</a>
+		<a href="#date">Date</a>
+		<a href="#help">Help</a>
+		<a href="#Action">Action</a>
+		<a href="#recom">Recommendations</a>
+		<a href="#search">Search</a>
 	</div>
 
 	<div class="card-form" id="card-form">
@@ -30,8 +44,7 @@
 	<div class="tab-content">
 		<div id="new-card">
 			<h1>Contemplation Card</h1>
-
-			<form action="/my-form-page" method="post">
+			<form id="form-card" action="/my-form-page" method="post">
 			  <div>
 				  <label for="pos-input">What did I learn -OR- do well today?</label>
 				  <textarea id="pos-input"></textarea>
@@ -52,22 +65,20 @@
 						<label for="doc-input">Extra Notes:</label>
 						<textarea id="doc-input"></textarea>
 				</div>
+				<button class="store-button">Submit Card</button>
 			</form>
 
 		</div>
 	</div>
 	</div>
-  <div>
+  <div class="main-contaier">
 
-	<input class="input-title-field" type="text">
-	<input onclick="document.getElementById('card-form').style.display='block'" class="input-code-field" type="text">
-
-	<button class="store-button">Store Data</button>
+	
 	<button class="get-button">Get Data</button>
 	<button class="delete-button">Delete</button>
   
   </div>
-  <div class="debug">
+  <div class="feed">
   	
   </div>
 </body>
