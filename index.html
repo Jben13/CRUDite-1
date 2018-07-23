@@ -16,10 +16,51 @@
 	</head>
 
 <body>
+	<div class="page">
+		<hi> 5 Minute Conptemplation</hi>
+	</div>
+
+	<div class="card-form" id="card-form">
+			<span onclick="document.getElementById('card-form').style.display='none'" 
+      class="close">&times;</span>
+		<ul class="tab-group">
+			<li class="tab-active"><a href="#new-card">New Card</a></li>
+		</ul>
+
+	<div class="tab-content">
+		<div id="new-card">
+			<h1>Contemplation Card</h1>
+
+			<form action="/my-form-page" method="post">
+			  <div>
+				  <label for="pos-input">What did I learn -OR- do well today?</label>
+				  <textarea id="pos-input"></textarea>
+				</div>
+				<div>
+					<label for="study-input">What do I need to study -OR- need more information?</label>
+					<textarea id="study-input"></textarea>
+				</div>
+				<div>
+					<label for="learn-input">What do I need help on?</label>
+					<textarea id="learn-input"></textarea>
+				</div>
+				<div>
+						<label for="recom-input">Recommendations?</label>
+						<input type="text" id="recom-input">
+				</div>
+				<div>
+						<label for="doc-input">Extra Notes:</label>
+						<textarea id="doc-input"></textarea>
+				</div>
+			</form>
+
+		</div>
+	</div>
+	</div>
   <div>
 
 	<input class="input-title-field" type="text">
-	<input class="input-code-field" type="text">
+	<input onclick="document.getElementById('card-form').style.display='block'" class="input-code-field" type="text">
 
 	<button class="store-button">Store Data</button>
 	<button class="get-button">Get Data</button>
