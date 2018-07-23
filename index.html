@@ -20,66 +20,64 @@
 
 <body>
 	<div class="page">
-		<hi> 5 Minute Conptemplation</hi>
+		<h1> 5 Minute Conptemplation</h1>
 		<br/>
 	  <button onclick="document.getElementById('card-form').style.display='block'" class="subject-submit">Start Card</button>
-	</div>
-
-	<div class="top-nav">
-		<a href="#home">Home</a>
-		<a href="#date">Date</a>
-		<a href="#help">Help</a>
-		<a href="#Action">Action</a>
-		<a href="#recom">Recommendations</a>
-		<a href="#search">Search</a>
 	</div>
 
 	<div class="card-form" id="card-form">
 			<span onclick="document.getElementById('card-form').style.display='none'" 
       class="close">&times;</span>
-		<ul class="tab-group">
-			<li class="tab-active"><a href="#new-card">New Card</a></li>
-		</ul>
+		<ul class="tab-group"></ul>
 
-	<div class="tab-content">
 		<div id="new-card">
 			<h1>Contemplation Card</h1>
-			<form id="form-card" action="/my-form-page" method="post">
+			<form onsubmit="return results();" id="form-card" action="/my-form-page" method="post">
 			  <div>
 				  <label for="pos-input">What did I learn -OR- do well today?</label>
-				  <textarea id="pos-input"></textarea>
+				  <textarea name="positive"  id="pos-input"></textarea>
 				</div>
 				<div>
 					<label for="study-input">What do I need to study -OR- need more information?</label>
-					<textarea id="study-input"></textarea>
+					<textarea name="study" id="study-input"></textarea>
 				</div>
 				<div>
 					<label for="learn-input">What do I need help on?</label>
-					<textarea id="learn-input"></textarea>
+					<textarea name="help"  id="learn-input"></textarea>
 				</div>
 				<div>
 						<label for="recom-input">Recommendations?</label>
-						<input type="text" id="recom-input">
+						<input name="recommend"   id="recom-input">
 				</div>
 				<div>
 						<label for="doc-input">Extra Notes:</label>
-						<textarea id="doc-input"></textarea>
+						<textarea name="notes"  id="doc-input"></textarea>
 				</div>
-				<button class="store-button">Submit Card</button>
-			</form>
+				<button class="submit-card">Submit Card</button>
+			  </div>
+			</form>	   
+	</div>
+	</div>
 
-		</div>
-	</div>
-	</div>
+
   <div class="main-contaier">
-
+			<div class="top-nav">
+					<a href="#home">Home</a>
+					<a href="#date">Date</a>
+					<a href="#help">Help</a>
+					<a href="#Action">Action</a>
+					<a href="#recom">Recommendations</a>
+					<a href="#search">Search</a>
+				</div>
 	
 	<button class="get-button">Get Data</button>
 	<button class="delete-button">Delete</button>
   
   </div>
   <div class="feed">
-  	
+		<script class="feedbox">
+			
+		</script>
   </div>
 </body>
 
