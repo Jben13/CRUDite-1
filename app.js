@@ -23,14 +23,15 @@ $('.submit-card').on("click", function(event) {
 		  obj[name] = value;
 	    var newObj = JSON.stringify(obj);
 	      localStorage.setItem(subject, newObj);
-		
+		var display;
+	
 	$inputBox.append(
-		subject, 
-		// + "What did I learn -OR- do well today? " + posText, 
-		// + "What do I need to study -OR- need more information? " + studyText, 
-		// + "What do I need help on? " + learnText, 
-		// + "List of Recommendations " + recomText, 
-		// + "Extra Notes: " + docText
+		subject,
+		display = "<p>What did I learn -OR- do well today? " + posText + 
+		"</p><p> What do I need to study -OR- need more information? " + studyText + 
+		"</p><p> What do I need help on? " + learnText + 
+		"</p><p> Recommendations? " + recomText + 
+		"</p><p> Additional Notes: " + docText + "</p>"
 	);
 	$inputBox.prependTo(".feed");
 	});
