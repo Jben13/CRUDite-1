@@ -11,7 +11,7 @@
 		<script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+	crossorigin="anonymous"></script>
 	<script src="app.js"></script>
 	<script src="moment.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -32,7 +32,11 @@
 
 		<div id="new-card">
 			<h1>Contemplation Card</h1>
-			<form onsubmit="return results();" id="form-card" action="/my-form-page" method="post">
+			<div>
+					<label for="subject">Subject:</label>
+					<input class="subject">
+			</div>
+			<form onsubmit="return results();" id="form-card" action="" method="post">
 			  <div>
 				  <label for="pos-input">What did I learn -OR- do well today?</label>
 				  <textarea name="positive"  id="pos-input"></textarea>
@@ -47,7 +51,7 @@
 				</div>
 				<div>
 						<label for="recom-input">Recommendations?</label>
-						<input name="recommend"   id="recom-input">
+						<textarea name="recommend"   id="recom-input"></textarea>
 				</div>
 				<div>
 						<label for="doc-input">Extra Notes:</label>
@@ -75,9 +79,7 @@
   
   </div>
   <div class="feed">
-		<script class="feedbox">
-			
-		</script>
+		
   </div>
 </body>
 
