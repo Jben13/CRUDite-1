@@ -14,6 +14,7 @@ $('.submit-card').on("click", function(event) {
 	var learnText = $('#learn-input').val();
 	var recomText = $('#recom-input').val();
 	var docText = $('#doc-input').val();
+	var $cardBox = $('<div class="cardBox"></div>');
 	var $inputBox = $('<div class="inputBox"></div>');
 	var obj = {};
 	$('#form-card :input').not(':submit').each(function() {
@@ -24,17 +25,19 @@ $('.submit-card').on("click", function(event) {
 	    var newObj = JSON.stringify(obj);
 	      localStorage.setItem(subject, newObj);
 		var display;
-	
+	 });
+	$cardBox.append(
 	$inputBox.append(
 		subject,
 		display = "<p>What did I learn -OR- do well today? " + posText + 
 		"</p><p> What do I need to study -OR- need more information? " + studyText + 
 		"</p><p> What do I need help on? " + learnText + 
 		"</p><p> Recommendations? " + recomText + 
-		"</p><p> Additional Notes: " + docText + "</p>"
-	);
+		"</p><p> Additional Notes: " + docText + "</p>"));
 	$inputBox.prependTo(".feed");
-	});
+
+	
+ 
 });
 
 $('.get-button').on('click', function(event) {

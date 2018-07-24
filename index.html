@@ -7,7 +7,8 @@
 	Add link to jquery
 	Add link to app
 	Add link to misc
-		-->
+		-->	
+		<!-- <img src="Vibrant-Texas-Bluebonnets-Beautiful-Sky.jpg" alt="blue-bell"> -->
 		<script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -19,44 +20,46 @@
 	</head>
 
 <body>
+	
 	<div class="page">
 		<h1> 5 Minute Conptemplation</h1>
 		<br/>
-	  <button onclick="document.getElementById('card-form').style.display='block'" class="subject-submit">Start Card</button>
 	</div>
-
-	<div class="card-form" id="card-form">
-			<span onclick="document.getElementById('card-form').style.display='none'" 
-      class="close">&times;</span>
-		<ul class="tab-group"></ul>
-
+	<button onclick="document.getElementById('card-form').style.display='block'" class="subject-submit">Start Card</button>
 		<div id="new-card">
-			<h1>Contemplation Card</h1>
+			<div class="card-form" id="card-form">
 			<div>
 					<label for="subject">Subject:</label>
 					<input class="subject">
 			</div>
+			<br/>
 			<form onsubmit="return results();" id="form-card" action="" method="post">
 			  <div>
-				  <label for="pos-input">What did I learn -OR- do well today?</label>
+					<label for="pos-input">What did I learn -OR- do well today?</label>
+					<br/>
 				  <textarea name="positive"  id="pos-input"></textarea>
 				</div>
 				<div>
 					<label for="study-input">What do I need to study -OR- need more information?</label>
+					<br/>
 					<textarea name="study" id="study-input"></textarea>
 				</div>
 				<div>
 					<label for="learn-input">What do I need help on?</label>
+					<br/>
 					<textarea name="help"  id="learn-input"></textarea>
 				</div>
 				<div>
 						<label for="recom-input">Recommendations?</label>
+						<br/>
 						<textarea name="recommend"   id="recom-input"></textarea>
 				</div>
 				<div>
 						<label for="doc-input">Additional Notes:</label>
+						<br/>
 						<textarea name="notes"  id="doc-input"></textarea>
 				</div>
+				<br/>
 				<button class="submit-card">Submit Card</button>
 			  </div>
 			</form>	   
@@ -64,7 +67,7 @@
 	</div>
 
 
-  <div class="main-contaier">
+  <!-- <div class="main-contaier">
 			<div class="top-nav">
 					<a href="#home">Home</a>
 					<a href="#date">Date</a>
@@ -72,7 +75,7 @@
 					<a href="#Action">Action</a>
 					<a href="#recom">Recommendations</a>
 					<a href="#search">Search</a>
-				</div>
+				</div> -->
 	
 	<button class="get-button">Get Data</button>
 	<button class="delete-button">Delete</button>
