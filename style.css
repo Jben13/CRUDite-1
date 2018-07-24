@@ -6,54 +6,80 @@ html{
   background-size: cover;
 }
 .page{
+  font-family: Marker Felt, fantasy, monospace;
   justify-content:center;
   display: flex;
   flex-flow: row-wrap;
-  padding: 10px;
+  
 }
-
+input{
+  width: 350px;
+  height: 30px;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  font-size:16px;
+  border: 3px solid black;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+h1{
+  font-family: Marker Felt, fantasy, monospace;
+  font-size: 35px;
+  font-style: oblique 0deg;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, transparent), to(rgba(255,255,255,0.3)));
+}
+textarea{
+  font-size:16px;
+  color: grey;
+  border-radius: 5px;
+  margin-bottom:3px;
+}
 body{
 justify-content: center;
 }
 
 button {
-  border-radius: 3px;
-  width: 150px;
-  margin: 1px;
-  height: 25px;
+  font-family: Marker Felt, fantasy, monospace;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 120px;
+  margin: 28px;
+  height: 30px;
   justify-content: center;
-  display: flex;
+  display: inline-block;
   flex-flow: row-wrap;
-}
-
-button:click {
-  
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #e0e1e2;
-
+  background-color: silver;
 }
+
 form{
+  font-family: Marker Felt, fantasy, monospace;
   font-size: 20px;
   color:black;
-  
 }
 textarea{
   width: 350px;
 }
+
 .card-form{
+  font-family: Marker Felt, fantasy, monospace;
   border: 3px solid black;
   font-weight: bold;
+  font-size: 20px;
+  display:block;
   justify-content: center;
-  background: rgba(126, 191, 235, 0.7);
-  padding: 40px;
+  background: rgba(180, 183, 186, 0.8);
+  padding: 30px;
   max-width: 375px;
-  margin: 40px auto;
+  margin: 20px auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px rgba(19, 35, 47, 0.3);
 }
+
 .inputBox{
   border: 4px solid black;
 }

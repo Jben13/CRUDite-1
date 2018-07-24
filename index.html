@@ -16,31 +16,33 @@
 	<script src="app.js"></script>
 	<script src="moment.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 
 <body>
 	
 	<div class="page">
-		<h1> 5 Minute Conptemplation</h1>
+		<h1 data-content='ReflectedText'>Introspection</h1>
 		<br/>
 	</div>
-	<button onclick="document.getElementById('card-form').style.display='block'" class="subject-submit">Start Card</button>
+	
 		<div id="new-card">
+			
 			<div class="card-form" id="card-form">
 			<div>
-					<label for="subject">Subject:</label>
-					<input class="subject">
+					<label for="subject">Subject: </label>
+					<input class="subject" placeholder="required">
 			</div>
 			<br/>
 			<form onsubmit="return results();" id="form-card" action="" method="post">
 			  <div>
-					<label for="pos-input">What did I learn -OR- do well today?</label>
+					<label for="pos-input">What did I learn -OR- do well on today?</label>
 					<br/>
 				  <textarea name="positive"  id="pos-input"></textarea>
 				</div>
 				<div>
-					<label for="study-input">What do I need to study -OR- need more information?</label>
+					<label for="study-input">What do I need to work on?</label>
 					<br/>
 					<textarea name="study" id="study-input"></textarea>
 				</div>
@@ -59,8 +61,8 @@
 						<br/>
 						<textarea name="notes"  id="doc-input"></textarea>
 				</div>
-				<br/>
 				<button class="submit-card">Submit Card</button>
+				<button onclick="document.getElementById('card-form').style.display='block'" class="subject-submit">New Card</button>
 			  </div>
 			</form>	   
 	</div>
